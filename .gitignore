@@ -1,0 +1,13 @@
+resources/passwords-*.yaml
+.idea/
+**/*.pyc
+**/.terraform
+**/*.tfstate*
+.python-version
+**/.jfrog/
+**/node_modules/
+**/.venv
+**/*.tgz
+**/*.npmrc
+.tmp/
+*.egg-info/
