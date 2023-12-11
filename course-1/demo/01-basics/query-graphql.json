@@ -1,0 +1,3 @@
+{
+  "query": "query {packages(filter: {name: \"*\",packageTypeIn: [MAVEN]},first: 3,orderBy: {field: NAME,direction: DESC}) {edges {node {name description }}}}"
+}
