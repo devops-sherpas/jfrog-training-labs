@@ -7,6 +7,10 @@ In this lab, we will experiment with creating repositories via the UI, API, and 
 
 * Ensure that you have a JFrog CLI profile pointing to your Artifactory instance, and ensure
 that it is the active profile (`jf config use`).
+To setup a JFrog configuration CLI profile use:
+   ```bash
+   jf config add <URL> --user <username> --password <password or token>
+   ```
 
 
 ### Create Repositories using the UI
