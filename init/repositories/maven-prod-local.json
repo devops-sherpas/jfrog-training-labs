@@ -1,0 +1,6 @@
+{
+  "key": "maven-prod-local",
+  "packageType": "maven",
+  "environments": ["PROD"],
+  "rclass": "local"
+}

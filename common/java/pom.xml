@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.devopsherpas.jfrog</groupId>
-	<artifactId>ExampleWAR</artifactId>
+	<groupId>com.jfrog.training</groupId>
+	<artifactId>ExampleApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<dependencies>
@@ -45,31 +45,6 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.jfrog.buildinfo</groupId>
-				<artifactId>artifactory-maven-plugin</artifactId>
-				<version>3.6.1</version>
-				<executions>
-					<execution>
-						<id>build-info</id>
-						<goals>
-							<goal>publish</goal>
-						</goals>
-						<configuration>
-							<deployProperties>
-								<prop1>value1</prop1>
-							</deployProperties>
-							<publisher>
-								<contextUrl>${artifactoryRoot}/artifactory</contextUrl>
-								<username>${artifactoryUser}</username>
-								<password>${artifactoryPassword}</password>
-								<repoKey>${repository}</repoKey>
-								<snapshotRepoKey>${repository}</snapshotRepoKey>
-							</publisher>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

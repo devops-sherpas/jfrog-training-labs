@@ -1,0 +1,5 @@
+items.find(
+  {
+    "repo": {"$eq": "generic-local-demo" }
+  }
+)

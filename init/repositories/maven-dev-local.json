@@ -1,0 +1,6 @@
+{
+  "key": "maven-dev-local",
+  "packageType": "maven",
+  "environments": ["DEV"],
+  "rclass": "local"
+}

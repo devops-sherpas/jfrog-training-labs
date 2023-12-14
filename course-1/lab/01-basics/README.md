@@ -8,8 +8,9 @@ and GraphQL.
 
 ## Prerequisites
 
-* Ensure that you have a JFrog CLI profile pointing to your Artifactory instance, and ensure
-that it is the active profile (`jf config use`).
+(See [Common Prerequisites](../../../README.md#common-prerequisites))
+
+* JFrog CLI profile defined and active, pointing to your main Artifactory instance.
 
 ## Progress
 
