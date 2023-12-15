@@ -26,7 +26,7 @@ Once the CLI is installed, you should create a profile that points to your Artif
 You can define a CLI profile using a command such as:
 
 ```bash
-jf config add train --url http://my-artifactory.jfrog.io --user your-username --password your-password --access-token your-token
+jf config add train --url http://my-artifactory.jfrog.io --user <your-username> --password <your-password> --access-token <your-token>
 ```
 
 * `train` is the profile's name. You can use any name you like.
