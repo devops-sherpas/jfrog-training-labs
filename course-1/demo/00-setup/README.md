@@ -11,9 +11,9 @@
    curl -u %RT_USERNAME%:%RT_TOKEN% -X POST -d "@create-keypair.json" -H "Content-Type: application/json" %RT_URL%/artifactory/api/security/keypair
    ```
 
-4. Install IntelliJ IDEA (Community Edition is sufficient).
-5. Start IntelliJ IDEA and install the JFrog plugin.
-6. In IntelliJ IDEA's Settings dialog, navigate to "Other Settings" -> "JFrog Global Configuration".
-   1. Under "Connection Details", set your JFrog Platform URL.
-   2. For "Authentication method", select "Access token" and paste your identity token into the "Access token" field.
-   3. Click "Test connection" to verify.
+4. Install Visual Studio Code.
+5. Start Visual Studio Code, and install the JFrog extension.
+6. Once installed, configure the JFrog extension to point at your JFrog environment.
+7. Install Docker.
+8. Ensure that Xray is enabled and working ("Xray" -> "Settings" -> "Advanced"/"Settings" -> "Xray Enabled").
+9. Create a Docker repository called `docker-dev-local`, and ensure it is indexed by Xray.
