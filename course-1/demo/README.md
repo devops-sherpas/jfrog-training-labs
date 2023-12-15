@@ -1,4 +1,6 @@
-# Course 1 Demo Setup
+# Demos for Course 1
+
+## Setup
 
 1. Follow the [common prerequisites](../../../README.md#common-prerequisites) section.
 2. Create repositories:

@@ -1,13 +1,17 @@
-# Course 1 Lab Setup
+# Labs for Course 1
 
-## Student's Workstation
+## Setup
+
+### Student's Workstation
 
 Follow the [common prerequisites](../../../README.md#common-prerequisites) section.
 
-## JFrog Environment
+### JFrog Environment
 
 Create the following repositories:
 
 | Name | Type |
 |------|------|
 | `generic-basics-demo-local` | Generic |
+
+

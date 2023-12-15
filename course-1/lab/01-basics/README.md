@@ -6,12 +6,6 @@ CLI, and the REST API.
 We will also experiment with setting properties, as well as querying for artifacts using AQL
 and GraphQL.
 
-## Prerequisites
-
-(See [Common Prerequisites](../../../README.md#common-prerequisites))
-
-* JFrog CLI profile defined and active, pointing to your main Artifactory instance.
-
 ## Progress
 
 1. Log in to Artifactory.
@@ -46,10 +40,10 @@ and GraphQL.
 
 1. Upload the file again using the REST API:
    ```bash
-   curl -X PUT -u <username>:<password> -d "@test.txt" <artifactory-url>/artifactory/lab-01-repo/test.txt
+   curl -X PUT -u %RT_USERNAME%:%RT_TOKEN% -d "@test.txt" <artifactory-url>/artifactory/lab-01-repo/test.txt
    ```
 1. Delete the file from your local machine.
 1. Download the file using the REST API:
    ```bash
-   curl -u <username>:<password> <artifactory-url>/artifactory/lab-01-repo/test.txt
+   curl -u %RT_USERNAME%:%RT_TOKEN% %RT_URL%/artifactory/lab-01-repo/test.txt
    ```

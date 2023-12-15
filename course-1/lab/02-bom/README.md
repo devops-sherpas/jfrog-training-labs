@@ -1,6 +1,9 @@
 # Lab: BOMs
 
-In this lab, we will experiment with using BOMs.
+Your lab environment is pre-populated with:
 
-## Prerequisites
+* JFrog Projects
+* Build
+* Release Bundle v2
 
+Use the UI to manipulate BOMs, similarly to how we showed in the demo.

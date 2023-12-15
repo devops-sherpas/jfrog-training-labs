@@ -1,2 +1,2 @@
-Labs for course 2
+# Labs for Course 2
 
