@@ -1,0 +1,6 @@
+{
+  "key": "team2-maven-virtual",
+  "packageType": "maven",
+  "rclass": "virtual",
+  "repositories": "team2-maven-dev-local,maven-central-remote"
+}

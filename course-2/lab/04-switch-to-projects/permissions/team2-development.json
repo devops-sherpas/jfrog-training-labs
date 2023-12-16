@@ -1,0 +1,10 @@
+{
+  "name": "team2-development",
+  "repo": {
+    "repositories": "team2-maven-dev-local",
+    "include-patterns": "**",
+    "actions-groups": {
+      "team1": "read,write,annotate"
+    }
+  }
+}

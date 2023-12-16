@@ -1,0 +1,11 @@
+{
+  "name": "all-remotes",
+  "repo": {
+    "repositories": "ANY REMOTE",
+    "include-patterns": "**",
+    "actions-groups": {
+      "team1": "read,write,annotate",
+      "team2": "read,write,annotate"
+    }
+  }
+}

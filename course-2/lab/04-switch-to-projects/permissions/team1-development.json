@@ -1,0 +1,10 @@
+{
+  "name": "team1-development",
+  "repo": {
+    "repositories": "team1-docker-dev-local,team1-maven-dev-local",
+    "include-patterns": "**",
+    "actions-groups": {
+      "team1": "read,write,annotate"
+    }
+  }
+}
