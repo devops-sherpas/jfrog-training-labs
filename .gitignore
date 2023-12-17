@@ -1,3 +1,5 @@
 .idea/
 *.class
-target/
+**/target/
+**/.terraform/**
+**/.terraform.*
