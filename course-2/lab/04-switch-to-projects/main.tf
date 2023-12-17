@@ -5,6 +5,15 @@ terraform {
       version = "9.7.0"
     }
   }
+  backend "remote" {
+    # Change this to be the hostname of your Artifactory environment
+    hostname = "train23lom01.jfrog.io"
+    # Change this to be your terraform backend repository name
+    organization = "terraform-backend"
+    workspaces {
+      name = "default"
+    }
+  }
 }
 
 variable "artifactory_url" {
