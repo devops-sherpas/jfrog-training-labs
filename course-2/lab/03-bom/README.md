@@ -52,7 +52,7 @@ Now, let's use the REST API to create an RBv2 from the build.
 
 2. Invoke the REST API to create the RBv2:
    ```bash
-   curl -X POST -u $RT_USERNAME:$RT_TOKEN -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" $RT_URL/lifecycle/api/v2/release_bundle?async=false
+   curl -X POST -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" $JFROG_URL/lifecycle/api/v2/release_bundle?async=false
    ```
 
 3. Inspect the response to ensure the RBv2 was created successfully.
@@ -70,7 +70,7 @@ Now, we'll use the REST API to promote the RBv2 to the DEV environment.
 
 2. Invoke the REST API to promote the RBv2:
    ```bash
-   curl -X POST -u $RT_USERNAME:$RT_TOKEN -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" $RT_URL/lifecycle/api/v2/promotion/records/bom-lab-release-bundle/1.0.0?async=false
+   curl -X POST -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" $JFROG_URL/lifecycle/api/v2/promotion/records/bom-lab-release-bundle/1.0.0?async=false
    ```
 
 3. Inspect the response to ensure the RBv2 was created successfully.

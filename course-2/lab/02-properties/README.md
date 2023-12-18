@@ -61,14 +61,14 @@ these properties.
 
 2. Execute the search:
    ```bash
-   curl -X POST -u $RT_USERNAME:$RT_TOKEN -d "@query-aql-rest.txt" -H "Content-Type: text/plain" $RT_URL/artifactory/api/search/aql
+   curl -X POST -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" -d "@query-aql-rest.txt" -H "Content-Type: text/plain" $JFROG_URL/artifactory/api/search/aql
    ```
 
 ### Applying property through the REST API
 
 1. Use the following command to set the `maturity` property to `prod`:
    ```bash
-   curl -X PUT -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/api/storage/generic-lab-local/test.txt?properties=maturity=prod
+   curl -X PUT -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" $JFROG_URL/artifactory/api/storage/generic-lab-local/test.txt?properties=maturity=prod
    ```
 
 ### Searching for artifacts by property value using GraphQL

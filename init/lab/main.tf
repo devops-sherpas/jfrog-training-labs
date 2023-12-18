@@ -16,17 +16,19 @@ terraform {
 }
 
 variable "artifactory_url" {
-  type = string
+  type    = string
+  default = null
 }
 
 variable "artifactory_access_token" {
-  type = string
+  type    = string
+  default = null
 }
 
 # Configure the Artifactory provider
 provider "artifactory" {
-  url           = var.artifactory_url
-  access_token  = var.artifactory_access_token
+  url          = var.artifactory_url
+  access_token = var.artifactory_access_token
 }
 
 # Configure the Xray provider
@@ -48,12 +50,12 @@ resource artifactory_local_generic_repository generic_local {
 }
 
 resource artifactory_local_maven_repository maven_bom_lab_dev {
-  key = "maven-bom-lab-dev-local"
+  key                  = "maven-bom-lab-dev-local"
   project_environments = ["DEV"]
 }
 
 resource artifactory_local_maven_repository maven_bom_lab_prod {
-  key = "maven-bom-lab-prod-local"
+  key                  = "maven-bom-lab-prod-local"
   project_environments = ["PROD"]
 }
 
@@ -104,31 +106,31 @@ resource "artifactory_virtual_maven_repository" "team2_maven_virtual" {
 
 resource "artifactory_user" "team1_users" {
   for_each = {
-    team1dev1 = artifactory_group.team1_devs
-    team1dev2 = artifactory_group.team1_devs
+    team1dev1   = artifactory_group.team1_devs
+    team1dev2   = artifactory_group.team1_devs
     team1releng = artifactory_group.team1_relengs
-    team1admin = artifactory_group.team1_admins
+    team1admin  = artifactory_group.team1_admins
   }
   name     = each.key
   email    = "labs-${each.key}@jfrog.io"
   password = "Labuser1!"
-  groups = [each.value.name]
+  groups   = [each.value.name]
 }
 
 resource "artifactory_group" "team1" {
-  name        = "team1"
+  name = "team1"
 }
 
 resource "artifactory_group" "team1_devs" {
-  name        = "team1-developers"
+  name = "team1-developers"
 }
 
 resource "artifactory_group" "team1_relengs" {
-  name        = "team1-release-engineers"
+  name = "team1-release-engineers"
 }
 
 resource "artifactory_group" "team1_admins" {
-  name        = "team1-admins"
+  name = "team1-admins"
 }
 
 resource "artifactory_permission_target" "team1_dev_access" {
@@ -154,7 +156,7 @@ resource "artifactory_permission_target" "team1_dev_access" {
     }
   }
   build {
-    repositories = ["artifactory-build-info"]
+    repositories     = ["artifactory-build-info"]
     includes_pattern = ["**"]
     actions {
       groups {
@@ -206,30 +208,30 @@ resource "artifactory_permission_target" "team1_prod_access" {
 
 resource "artifactory_user" "team2_users" {
   for_each = {
-    team2dev1 = artifactory_group.team2_devs
+    team2dev1   = artifactory_group.team2_devs
     team2releng = artifactory_group.team2_relengs
-    team2admin = artifactory_group.team2_admins
+    team2admin  = artifactory_group.team2_admins
   }
   name     = each.key
   email    = "labs-${each.key}@jfrog.io"
   password = "Labuser1!"
-  groups = [each.value.name]
+  groups   = [each.value.name]
 }
 
 resource "artifactory_group" "team2" {
-  name        = "team2"
+  name = "team2"
 }
 
 resource "artifactory_group" "team2_devs" {
-  name        = "team2-developers"
+  name = "team2-developers"
 }
 
 resource "artifactory_group" "team2_relengs" {
-  name        = "team2-release-engineers"
+  name = "team2-release-engineers"
 }
 
 resource "artifactory_group" "team2_admins" {
-  name        = "team2-admins"
+  name = "team2-admins"
 }
 
 resource "artifactory_permission_target" "team2_dev_access" {
@@ -254,7 +256,7 @@ resource "artifactory_permission_target" "team2_dev_access" {
     }
   }
   build {
-    repositories = ["artifactory-build-info"]
+    repositories     = ["artifactory-build-info"]
     includes_pattern = ["**"]
     actions {
       groups {
@@ -325,9 +327,9 @@ resource "artifactory_permission_target" "any_remote" {
 # Others
 
 resource artifactory_keypair main_signing {
-  alias = "main"
-  pair_name = "main"
-  pair_type = "GPG"
+  alias       = "main"
+  pair_name   = "main"
+  pair_type   = "GPG"
   private_key = file("private.asc")
-  public_key = file("public.asc")
+  public_key  = file("public.asc")
 }

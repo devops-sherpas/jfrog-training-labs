@@ -37,10 +37,10 @@ and GraphQL.
 
 1. Upload the file again using the REST API:
    ```bash
-   curl -X PUT -u $RT_USERNAME:$RT_TOKEN -d "@test.txt" $RT_URL/artifactory/generic-lab-local/test.txt
+   curl -X PUT -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" -d "@test.txt" $JFROG_URL/artifactory/generic-lab-local/test.txt
    ```
 1. Delete the file from your local machine.
 1. Download the file using the REST API:
    ```bash
-   curl -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/generic-lab-local/test.txt
+   curl -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" $JFROG_URL/artifactory/generic-lab-local/test.txt
    ```

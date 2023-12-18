@@ -2,16 +2,14 @@
 
 ## Common Prerequisites
 
-There are certain prerequisites which are common to most (or all) of the labs:
+There are certain prerequisites which are common to most (or all) of the demos and labs:
 
 ### Environment Variables
 
 Most `curl` commands will require your Artifactory URL, username, password, and (sometimes) token:
 
-* `RT_URL`: should be set to your Artifactory URL
-* `RT_USERNAME`: should be set to your username
-* `RT_PASSWORD`: should be set to your password
-* `RT_TOKEN`: should be set to an identity token that you create
+* `JFROG_URL`: should be set to your Artifactory URL
+* `JFROG_ACCESS_TOKEN`: should be set to an identity token that you create
 
 To create an identity token, navigate to your profile (top right corner, click "Edit Profile"),
 unlock the screen by providing your password, and then "Generate Identity Token".
@@ -60,4 +58,8 @@ On Linux, install Docker via your distribution's package manager.
 ### Terraform
 
 You should have Terraform installed on your machine.
+
 Download and extract Terraform from HashiCorp's website.
+
+The environment variables `JFROG_URL` and `JFROG_ACCESS_TOKEN`, which are described above,
+are also automatically used by JFrog's Terraform providers by default.

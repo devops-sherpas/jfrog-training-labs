@@ -42,7 +42,7 @@ JFrog's Terraform provider.
 3. Use the REST API to create the repository as follows (substitute `my-repository` with the name of your repository.
    It must be equal to the repository key specified in your JSON):
    ```bash
-   curl -X PUT -d "@repository-api.json" -H "Content-Type: application/json" -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/api/repositories/my-repository
+   curl -X PUT -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" -d "@repository-api.json" -H "Content-Type: application/json" $JFROG_URL/artifactory/api/repositories/my-repository
    ```
 
 ### Using JFrog's Terraform Provider
@@ -61,7 +61,7 @@ Then, from within this directory:
    the command line:
 
    ```bash
-   terraform apply -var artifactory_url=$RT_URL -var artifactory_access_token=$RT_TOKEN
+   terraform apply
    ```
 
    Validate the creation preview and enter `yes` to have the repository created.
@@ -69,5 +69,5 @@ Then, from within this directory:
 3. Destroy the created resource, using the `terraform destroy` command:
 
    ```bash
-   terraform destroy -var artifactory_url=$RT_URL -var artifactory_access_token=$RT_TOKEN
+   terraform destroy
    ```
