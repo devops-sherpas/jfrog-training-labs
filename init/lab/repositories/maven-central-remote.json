@@ -1,6 +1,0 @@
-{
-  "key": "maven-central-remote",
-  "packageType": "maven",
-  "rclass": "remote",
-  "url": "https://jcenter.bintray.com"
-}

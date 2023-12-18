@@ -6,11 +6,6 @@ in order to demonstrate how to integrate RBv2 functionality from within CI proce
 
 ## Process
 
-### Create repositories
-
-* Maven repository, `maven-bom-lab-dev-local`, associated with the `DEV` environment.
-* Maven repository, `maven-bom-lab-prod-local`, assocaited with the `PROD` environment.
-
 ### Create build info
 
 1. Navigate to [shared Java project directory](../../../common/java).
@@ -57,7 +52,7 @@ Now, let's use the REST API to create an RBv2 from the build.
 
 2. Invoke the REST API to create the RBv2:
    ```bash
-   curl -X POST -u %RT_USERNAME%:%RT_TOKEN% -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" %RT_URL%/lifecycle/api/v2/release_bundle?async=false
+   curl -X POST -u $RT_USERNAME:$RT_TOKEN -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" $RT_URL/lifecycle/api/v2/release_bundle?async=false
    ```
 
 3. Inspect the response to ensure the RBv2 was created successfully.
@@ -69,13 +64,13 @@ Now, we'll use the REST API to promote the RBv2 to the DEV environment.
 1. Prepare a JSON file called `payload.json` with the request's payload:
    ```json
    {
-     "environment": "DEV"
+     "environment": "PROD"
    }
    ```
 
 2. Invoke the REST API to promote the RBv2:
    ```bash
-   curl -X POST -u %RT_USERNAME%:%RT_TOKEN% -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" %RT_URL%/lifecycle/api/v2/promotion/records/bom-lab-release-bundle/1.0.0?async=false
+   curl -X POST -u $RT_USERNAME:$RT_TOKEN -d "@payload.json" -H "X-JFrog-Signing-Key-Name: main" $RT_URL/lifecycle/api/v2/promotion/records/bom-lab-release-bundle/1.0.0?async=false
    ```
 
 3. Inspect the response to ensure the RBv2 was created successfully.

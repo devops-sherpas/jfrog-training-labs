@@ -1,8 +1,0 @@
-Key-Type: RSA
-Key-Length: 3072
-Subkey-Type: RSA
-Subkey-Length: 3072
-Name-Real: Test Lab
-Name-Email: testlab@jfrog.com
-Expire-Date: 0
-%commit

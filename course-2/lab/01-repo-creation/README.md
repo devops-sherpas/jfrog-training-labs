@@ -3,12 +3,6 @@
 In this lab, we will practice the creation of repositories, using the UI, the API, the CLI, and finally - using
 JFrog's Terraform provider.
 
-## Prerequisites
-
-* You should have Terraform installed on your machine. Download & install the most recent version.
-* You should have a JFrog CLI profile defined & activated, pointing at your Artifactory instance.
-* You should have environment variables set, as described at the root of this repository.
-
 ## Progress
 
 ### Using the UI
@@ -42,21 +36,13 @@ JFrog's Terraform provider.
    **NOTE**: The JSON structure for the REST API is not identical to the structure consumed by the CLI.
    You can find reference to the REST API's structure at: https://jfrog.com/help/r/jfrog-rest-apis/repository-configuration-json
 
-   For example:
+   1. You can find an example in [repository-api.json](repository-api.json).
+   2. We will assume that the file name is `repository-api.json`.
 
-   ```json
-   {
-     "key": "my-repository",
-     "rclass": "local",
-     "packageType": "maven"
-   }
-   ```
-   We will assume that the file name is `repository-api.json`.
-
-2. Use the REST API to create the repository as follows (substitute `my-repository` with the name of your repository.
+3. Use the REST API to create the repository as follows (substitute `my-repository` with the name of your repository.
    It must be equal to the repository key specified in your JSON):
    ```bash
-   curl -X PUT -d "@repository-api.json" -H "Content-Type: application/json" -u %RT_USERNAME%:%RT_TOKEN% %RT_URL%/artifactory/api/repositories/my-repository
+   curl -X PUT -d "@repository-api.json" -H "Content-Type: application/json" -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/api/repositories/my-repository
    ```
 
 ### Using JFrog's Terraform Provider
@@ -75,7 +61,7 @@ Then, from within this directory:
    the command line:
 
    ```bash
-   terraform apply -var artifactory_url=%RT_URL% -var artifactory_access_token=%RT_TOKEN%
+   terraform apply -var artifactory_url=$RT_URL -var artifactory_access_token=$RT_TOKEN
    ```
 
    Validate the creation preview and enter `yes` to have the repository created.
@@ -83,5 +69,5 @@ Then, from within this directory:
 3. Destroy the created resource, using the `terraform destroy` command:
 
    ```bash
-   terraform destroy -var artifactory_url=%RT_URL% -var artifactory_access_token=%RT_TOKEN%
+   terraform destroy -var artifactory_url=$RT_URL -var artifactory_access_token=$RT_TOKEN
    ```

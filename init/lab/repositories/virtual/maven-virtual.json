@@ -1,8 +1,0 @@
-{
-  "key": "maven-virtual",
-  "packageType": "maven",
-  "rclass": "virtual",
-  "repositories": [
-    "maven-central-remote"
-  ]
-}

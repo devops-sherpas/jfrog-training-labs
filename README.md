@@ -56,3 +56,8 @@ Certain demos and labs require Docker to be installed.
 
 On Windows, install Docker Desktop for Windows.
 On Linux, install Docker via your distribution's package manager.
+
+### Terraform
+
+You should have Terraform installed on your machine.
+Download and extract Terraform from HashiCorp's website.

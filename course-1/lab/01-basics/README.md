@@ -8,12 +8,9 @@ and GraphQL.
 
 ## Progress
 
-1. Log in to Artifactory.
-2. Create a repository. Choose the type "generic", and provide it with a name, such as `lab-01-repo`.
-3. Create a sample text file on your local machine, such as `test.txt`.
-
 ### Upload / Download Using the UI
 
+1. Create a sample text file on your local machine, such as `test.txt`.
 1. Navigate to the artifacts browser ("Artifactory" -> "Artifacts"), and focus on your new repository.
 1. Click the "Deploy" button at the top right.
 1. Drag and drop your text file into the "Single Deploy" box.
@@ -27,12 +24,12 @@ and GraphQL.
 1. Open a command-line window, and browse to the directory containing your file.
 1. Upload the file to the repository using the JFrog CLI:
    ```bash
-   jf jf rt upload test.txt lab-01-repo/
+   jf jf rt upload test.txt generic-lab-local/
    ```
 1. Delete the file from your local machine.
 1. Download the file from the repository into your local machine:
    ```bash
-   jf rt download lab-01-demo/test.txt .
+   jf rt download generic-lab-local/test.txt .
    ```
 1. Delete the file from the repository.
 
@@ -40,14 +37,10 @@ and GraphQL.
 
 1. Upload the file again using the REST API:
    ```bash
-   curl -X PUT -u $RT_USERNAME:$RT_TOKEN -d "@test.txt" $RT_URL/artifactory/lab-01-repo/test.txt
+   curl -X PUT -u $RT_USERNAME:$RT_TOKEN -d "@test.txt" $RT_URL/artifactory/generic-lab-local/test.txt
    ```
 1. Delete the file from your local machine.
 1. Download the file using the REST API:
    ```bash
-   curl -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/lab-01-repo/test.txt
+   curl -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/generic-lab-local/test.txt
    ```
-
-### Cleanup
-
-Delete the repository you created (`lab-01-repo`).

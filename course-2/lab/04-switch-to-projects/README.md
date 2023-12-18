@@ -2,18 +2,10 @@
 
 In this lab, we will implement the switch to JFrog projects.
 
-Our starting point will be an Artifactory environment with no projects at all.
-
-## Initialization
-
-First, we will need to initialize our Artifactory environment to our starting point: a "flat" Artifactory
-environment, with no projects at all.
-
-To achieve this, apply the `main.tf` Terraform module.
+Our starting point is an Artifactory environment with no projects at all, but containing resources for
+two teams: `team1` and `team2`.
 
 ## Progress
-
-After running the initialization script, Artifactory contains resources for two teams: `team1` and `team2`.
 
 ### Creating the projects
 

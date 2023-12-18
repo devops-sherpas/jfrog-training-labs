@@ -4,14 +4,13 @@ terraform {
       source  = "registry.terraform.io/jfrog/artifactory"
       version = "9.7.0"
     }
-  }
-  backend "remote" {
-    # Change this to be the hostname of your Artifactory environment
-    hostname = "train23lom01.jfrog.io"
-    # Change this to be your terraform backend repository name
-    organization = "terraform-backend"
-    workspaces {
-      name = "default"
+    xray = {
+      source  = "jfrog/xray"
+      version = "2.1.0"
+    }
+    project = {
+      source  = "jfrog/project"
+      version = "1.3.4"
     }
   }
 }
@@ -26,9 +25,39 @@ variable "artifactory_access_token" {
 
 # Configure the Artifactory provider
 provider "artifactory" {
-  url          = "${var.artifactory_url}/artifactory"
+  url           = var.artifactory_url
+  access_token  = var.artifactory_access_token
+}
+
+# Configure the Xray provider
+provider "xray" {
+  url          = var.artifactory_url
   access_token = var.artifactory_access_token
 }
+
+# Configure the JFrog Projects provider
+provider "project" {
+  url          = var.artifactory_url
+  access_token = var.artifactory_access_token
+}
+
+# Repositories
+
+resource artifactory_local_generic_repository generic_local {
+  key = "generic-lab-local"
+}
+
+resource artifactory_local_maven_repository maven_bom_lab_dev {
+  key = "maven-bom-lab-dev-local"
+  project_environments = ["DEV"]
+}
+
+resource artifactory_local_maven_repository maven_bom_lab_prod {
+  key = "maven-bom-lab-prod-local"
+  project_environments = ["PROD"]
+}
+
+# For the "Switch to Projects" lab
 
 resource "artifactory_local_maven_repository" "maven_repositories" {
   for_each = toset([
@@ -291,4 +320,14 @@ resource "artifactory_permission_target" "any_remote" {
       }
     }
   }
+}
+
+# Others
+
+resource artifactory_keypair main_signing {
+  alias = "main"
+  pair_name = "main"
+  pair_type = "GPG"
+  private_key = file("private.asc")
+  public_key = file("public.asc")
 }
