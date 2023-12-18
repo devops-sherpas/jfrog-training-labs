@@ -3,7 +3,7 @@
     {
       "aql": {
         "items.find": {
-          "repo": "generic-local-demo"
+          "repo": "generic-demo-local"
         }
       }
     }

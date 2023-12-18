@@ -1,6 +1,6 @@
 # Demo: Static Application Security Testing (SAST) & Software Composition Analysis (SCA) for IDE's
 
-Start Visual Studio Code, and open this directory (that is, the directory containing this `README.md` file).
+Start Visual Studio Code, and open the directory containing this Git repository.
 
 Click the JFrog extension button on the left sidebar.
 

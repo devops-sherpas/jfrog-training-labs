@@ -8,3 +8,5 @@
 6. Show how shared repository is viewable within the new project.
 7. Create custom roles.
 8. Associate users with roles.
+
+At the end of the demo, delete the project.

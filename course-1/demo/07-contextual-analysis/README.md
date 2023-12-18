@@ -6,7 +6,7 @@ of your Artifactory instance):
 ```bash
 cd js
 docker build -t js-demo .
-docker tag js-demo <ARTIFACTORY_HOST>/docker-dev-local/js-demo:latest
+docker tag js-demo <ARTIFACTORY_HOST>/docker-c01-dev-local/js-demo:latest
 ```
 
 Log in to Docker (provide your username & access token):
@@ -18,7 +18,7 @@ docker login <ARTIFACTORY_HOST>
 Push to the Docker repository:
 
 ```bash
-docker push train23lom01.jfrog.io/docker-dev-local/js-demo:latest
+docker push <ARTIFACTORY_HOST>/docker-c01-dev-local/js-demo:latest
 ```
 
 Then navigate to Xray's Scans List, and select the docker image you just uploaded.

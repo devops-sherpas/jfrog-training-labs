@@ -17,7 +17,7 @@ variable "artifactory_access_token" {
 
 # Configure the Artifactory provider
 provider "artifactory" {
-  url           = "${var.artifactory_url}/artifactory"
+  url           = var.artifactory_url
   access_token  = var.artifactory_access_token
 }
 

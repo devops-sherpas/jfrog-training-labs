@@ -1,5 +1,5 @@
 items.find(
   {
-    "repo": {"$eq": "generic-local-demo" }
+    "repo": {"$eq": "generic-demo-local" }
   }
 )

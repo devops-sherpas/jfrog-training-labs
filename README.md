@@ -41,3 +41,18 @@ To use this profile:
 ```bash
 jf config use train
 ```
+
+### IDE
+
+1. Install Visual Studio Code.
+2. Install the JFrog Extension.
+3. Configure the JFrog Extension by having it connect to your JFrog environment.
+   1. If you properly installed the CLI already, then your CLI profile should be automatically detected by the IDE extension
+      and you will be prompted accordingly.
+
+### Docker
+
+Certain demos and labs require Docker to be installed.
+
+On Windows, install Docker Desktop for Windows.
+On Linux, install Docker via your distribution's package manager.

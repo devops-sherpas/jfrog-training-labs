@@ -40,10 +40,14 @@ and GraphQL.
 
 1. Upload the file again using the REST API:
    ```bash
-   curl -X PUT -u %RT_USERNAME%:%RT_TOKEN% -d "@test.txt" <artifactory-url>/artifactory/lab-01-repo/test.txt
+   curl -X PUT -u $RT_USERNAME:$RT_TOKEN -d "@test.txt" $RT_URL/artifactory/lab-01-repo/test.txt
    ```
 1. Delete the file from your local machine.
 1. Download the file using the REST API:
    ```bash
-   curl -u %RT_USERNAME%:%RT_TOKEN% %RT_URL%/artifactory/lab-01-repo/test.txt
+   curl -u $RT_USERNAME:$RT_TOKEN $RT_URL/artifactory/lab-01-repo/test.txt
    ```
+
+### Cleanup
+
+Delete the repository you created (`lab-01-repo`).

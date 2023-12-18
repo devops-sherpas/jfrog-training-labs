@@ -5,7 +5,7 @@
 2. Navigate to the [common Java project](../../../common/java).
 3. Prepare it for a build, and then build it:
    ```bash
-   jf mvnc --repo-deploy-releases maven-dev-local --repo-deploy-snapshots maven-dev-local
+   jf mvnc --repo-deploy-releases maven-c02-dev-local --repo-deploy-snapshots maven-c02-dev-local
    jf mvn clean deploy --build-name bom-scan-example --build-number 1
    ```
 4. Push the build info to Artifactory:

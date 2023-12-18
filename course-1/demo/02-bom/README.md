@@ -2,18 +2,13 @@
 
 ## Process
 
-### Create repositories
-
-* Maven repository, `maven-dev-local`, associated with the `DEV` environment.
-* Maven repository, `maven-prod-local`, assocaited with the `PROD` environment.
-
 ### Create build info
 
 1. Navigate to [shared Java project directory](../../../common/java).
 2. Create build configuration:
 
    ```bash
-   jf mvnc --repo-deploy-releases maven-dev-local --repo-deploy-snapshots maven-dev-local
+   jf mvnc --repo-deploy-releases maven-c01-dev-local --repo-deploy-snapshots maven-c01-dev-local
    ```
 
 3. Build & deploy:
