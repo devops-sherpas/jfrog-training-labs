@@ -144,6 +144,6 @@ resource artifactory_keypair main_signing {
   alias       = "main"
   pair_name   = "main"
   pair_type   = "GPG"
-  private_key = file("private.asc")
-  public_key  = file("public.asc")
+  private_key = file("../resources/private.asc")
+  public_key  = file("../resources/public.asc")
 }
