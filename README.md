@@ -6,10 +6,10 @@ There are certain prerequisites which are common to most (or all) of the demos a
 
 ### Environment Variables
 
-Most `curl` commands will require your Artifactory URL, username, password, and (sometimes) token:
+Most `curl` commands will require your Artifactory URL and token:
 
-* `JFROG_URL`: should be set to your Artifactory URL
-* `JFROG_ACCESS_TOKEN`: should be set to an identity token that you create
+* `JFROG_URL`: should be set to your Artifactory URL.
+* `JFROG_ACCESS_TOKEN`: should be set to an access token or an identity token.
 
 To create an identity token, navigate to your profile (top right corner, click "Edit Profile"),
 unlock the screen by providing your password, and then "Generate Identity Token".
