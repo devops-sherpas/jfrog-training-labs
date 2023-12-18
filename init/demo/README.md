@@ -1,4 +1,4 @@
-# Initializing a Lab Environment
+# Initializing a Demo Environment
 
 ## Prerequisites
 
