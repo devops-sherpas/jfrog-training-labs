@@ -4,3 +4,5 @@
 **/.terraform/**
 **/.terraform.*
 terraform.tfstate*
+.npmrc
+**/node_modules/

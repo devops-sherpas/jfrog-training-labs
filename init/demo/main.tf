@@ -140,9 +140,16 @@ resource artifactory_virtual_maven_repository maven_virtual {
   ]
 }
 
-resource artifactory_remote_docker_repository docker_hub {
-  key = "docker-hub-demo-remote"
-  url = "https://registry-1.docker.io"
+resource artifactory_remote_npm_repository npm_central {
+  key = "npm-demo-remote"
+  url = "https://registry.npmjs.org"
+}
+
+resource artifactory_virtual_npm_repository npm_virtual {
+  key = "npm-demo-virtual"
+  repositories = [
+    artifactory_remote_npm_repository.npm_central.key
+  ]
 }
 
 # Others

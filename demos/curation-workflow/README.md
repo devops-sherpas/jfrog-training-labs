@@ -1,11 +1,11 @@
-# Demo: Curation
+# Demo: Curation Workflow
 
 1. Ensure that Curation is enabled ("Administration" -> "Curation" -> "General" -> "Curation Service Activation").
-2. Under "Administration" -> "Curation" -> "Curated Repositories", click the "State" toggle next to `docker-hub-demo-remote`
-   and `maven-central-demo-remote` so they become enabled.
+2. Under "Administration" -> "Curation" -> "Curated Repositories", click the "State" toggle next to `maven-central-demo-remote`
+   so it becomes curated.
 3. Switch to the "Application" sidebar, and navigate to "Curation" -> "Policies Management", and click "Create New Policy".
-   1. Policy Name: `curation-demo`
-   2. Repositories: "All Curated"
+   1. Policy Name: `curation-workflow-demo`
+   2. Repositories: "Specific", and then select `maven-central-demo-remote`.
    3. Policy Condition: "CVE with CVSS score of 9 or above (with or without a fix)".
    4. Waivers: None (just click "Next").
    5. Actions: "Dry run". Also select "Notify by Email" and enter your email address.

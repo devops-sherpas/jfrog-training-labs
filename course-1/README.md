@@ -6,7 +6,7 @@
 2. [BOM Basics](../demos/bom-basics)
 3. [Projects Basics](../demos/projects-basics)
 4. [BOM Distribution](../demos/bom-distribution)
-5. [Curation](../demos/curation-workflow)
+5. [Curation Introduction](../demos/curation-intro)
 6. [IDE](../demos/ide)
 7. [Contextual Analysis](../demos/contextual-analysis)
 
