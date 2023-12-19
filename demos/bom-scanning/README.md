@@ -2,7 +2,7 @@
 
 1. Ensure that Xray is configured to scan all builds. In Xray's administration, click "Indexed Resources" and
    add all current and future builds (using a pattern: `**`).
-2. Navigate to the [common Java project](../../../common/java).
+2. Navigate to the [common Java project](../../common/java).
 3. Prepare it for a build, and then build it:
    ```bash
    jf mvnc --repo-deploy-releases maven-c02-dev-local --repo-deploy-snapshots maven-c02-dev-local

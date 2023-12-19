@@ -2,7 +2,7 @@
 
 ## Creating Build Info
 
-1. Navigate to the [shared Java project](../../../common/java).
+1. Navigate to the [shared Java project](../../common/java).
 2. Create a new build configuration:
    ```bash
    jf mvnc --repo-deploy-releases maven-c02-dev-local --repo-deploy-snapshots maven-c02-dev-local

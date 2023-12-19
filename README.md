@@ -4,6 +4,10 @@
 
 There are certain prerequisites which are common to most (or all) of the demos and labs:
 
+### Xray
+
+Ensure that Xray is enabled and working ("Xray" -> "Settings" -> "Advanced"/"Settings" -> "Xray Enabled").
+
 ### Environment Variables
 
 You should have the following environment variables set:

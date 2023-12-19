@@ -15,7 +15,7 @@
 ### Create Build Info
 
 1. In `PROJ1`, create a Maven repository called `prj1-maven-dev-local`.
-2. Navigate to [shared Java project directory](../../../common/java).
+2. Navigate to [shared Java project directory](../../common/java).
 3. Create build configuration:
 
    ```bash

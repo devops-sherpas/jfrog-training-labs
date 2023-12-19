@@ -39,7 +39,7 @@ JFrog's Terraform provider.
    1. You can find an example in [repository-api.json](repository-api.json).
    2. We will assume that the file name is `repository-api.json`.
 
-3. Use the REST API to create the repository as follows (substitute `my-repository` with the name of your repository.
+2. Use the REST API to create the repository as follows (substitute `my-repository` with the name of your repository.
    It must be equal to the repository key specified in your JSON):
    ```bash
    curl -X PUT -H "Authorization: Bearer $JFROG_ACCESS_TOKEN" -d "@repository-api.json" -H "Content-Type: application/json" $JFROG_URL/artifactory/api/repositories/my-repository

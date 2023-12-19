@@ -8,7 +8,7 @@ in order to demonstrate how to integrate RBv2 functionality from within CI proce
 
 ### Create build info
 
-1. Navigate to [shared Java project directory](../../../common/java).
+1. Navigate to [shared Java project directory](../../common/java).
 2. Create build configuration:
 
    ```bash

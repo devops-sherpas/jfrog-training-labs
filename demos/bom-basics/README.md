@@ -4,7 +4,7 @@
 
 ### Create build info
 
-1. Navigate to [shared Java project directory](../../../common/java).
+1. Navigate to [shared Java project directory](../../common/java).
 2. Create build configuration:
 
    ```bash
