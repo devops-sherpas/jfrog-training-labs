@@ -1,5 +1,5 @@
 {
-  "key": "maven-dev-local",
+  "key": "maven-dev-rccli-local",
   "packageType": "maven",
   "rclass": "local"
 }

@@ -49,18 +49,6 @@ resource artifactory_local_generic_repository basics_local {
   key = "generic-demo-local"
 }
 
-resource artifactory_local_generic_repository maven_dev {
-  key                  = "maven-dev-local"
-  project_environments = ["DEV"]
-  xray_index           = true
-}
-
-resource artifactory_local_generic_repository maven_prod {
-  key                  = "maven-prod-local"
-  project_environments = ["PROD"]
-  xray_index           = true
-}
-
 # For course 1
 
 resource artifactory_local_docker_v2_repository docker_dev_local {
@@ -136,6 +124,25 @@ resource xray_watch project_watch {
   watch_resource {
     type = "all-builds"
   }
+}
+
+# Remotes for Curation
+
+resource artifactory_remote_maven_repository maven_central {
+  key = "maven-central-demo-remote"
+  url = "https://repo.maven.apache.org/maven2"
+}
+
+resource artifactory_virtual_maven_repository maven_virtual {
+  key = "maven-demo-virtual"
+  repositories = [
+    artifactory_remote_maven_repository.maven_central.key
+  ]
+}
+
+resource artifactory_remote_docker_repository docker_hub {
+  key = "docker-hub-demo-remote"
+  url = "https://registry-1.docker.io"
 }
 
 # Others

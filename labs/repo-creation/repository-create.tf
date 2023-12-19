@@ -23,6 +23,6 @@ provider "artifactory" {
 
 # Create a new repository
 resource "artifactory_local_maven_repository" "maven_repository" {
-  key             = "maven-tf-example"
+  key             = "maven-dev-rctf-local"
   description     = "Maven repository created through Terraform"
 }
