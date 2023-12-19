@@ -3,8 +3,9 @@
 Build & tag the docker image of the attached NodeJS app (replace `<ARTIFACTORY_HOST>` with the hostname
 of your Artifactory instance):
 
+Navigate to the [common NodeJS module](../../common/js).
+
 ```bash
-cd js
 docker build -t js-demo .
 docker tag js-demo <ARTIFACTORY_HOST>/docker-c01-dev-local/js-demo:latest
 ```
