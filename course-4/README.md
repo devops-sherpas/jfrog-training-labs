@@ -2,7 +2,7 @@
 
 ## Demos
 
-1. [Curation](../demos/curation)
+1. [Curation Workflow](../demos/curation-workflow)
 2. [IDE Plugin](../demos/ide-plugin)
 3. [SAST](../demos/sast)
 4. [CI Pipelines with Scans](../demos/ci-pipelines-with-scans)
