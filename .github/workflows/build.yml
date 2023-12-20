@@ -15,7 +15,8 @@ jobs:
         run: |
           cd common/js
           jf audit
+          echo "rc=$?"
       - name: Post-Build Scan
         run: |
           cd common/js
-          jf scan
+          jf scan .
